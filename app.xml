@@ -11,25 +11,37 @@
 	    <Require feature="minimessage"/>
 
 		<!-- Icons: 3 sizes, 16x16, 48x48, 128x128 -->
+		<!--
 		<Link rel="Icon" href="images/icon16.png" />
 		<Link rel="MediumIcon" href="images/icon48.png" />
 		<Link rel="LargeIcon" href="images/icon128.png" />
+		-->
 
 		<!-- Screenshots: 600w x 400h, should include at least 1 and up to 5 -->
-		<!-- <Link rel="Screenshot1" href="images/screenshot1.png" /> <Link rel="Screenshot2" 
-			href="images/screenshot2.png" /> <Link rel="Screenshot3" href="images/screenshot3.png" 
-			/> <Link rel="Screenshot4" href="images/screenshot4.png" /> <Link rel="Screenshot5" 
-			href="images/screenshot5.png" /> -->
+		<!--
+		<Link rel="Screenshot1" href="images/screenshot1.png" />
+		<Link rel="Screenshot2" href="images/screenshot2.png" />
+		<Link rel="Screenshot3" href="images/screenshot3.png" />
+		<Link rel="Screenshot4" href="images/screenshot4.png" />
+		<Link rel="Screenshot5" href="images/screenshot5.png" />
+		-->
 
 		<!-- OAuth Services: https://developers.jivesoftware.com/community/docs/DOC-1161 -->
-		<!-- <OAuth> <Service name="example"> <Access url="http://api.example.com/oauth/access_token" 
-			method="POST" /> <Request url="http://api.example.com/oauth/request_token" 
-			method="POST" /> <Authorization url="http://api.example.com/oauth/authorize" 
-			/> </Service> </OAuth> -->
+		<!--
+		<OAuth>
+			<Service name="example">
+				<Access url="http://api.example.com/oauth/access_token" method="POST" />
+				<Request url="http://api.example.com/oauth/request_token" method="POST" />
+				<Authorization url="http://api.example.com/oauth/authorize" />
+			</Service>
+		</OAuth>
+		-->
 
 		<!-- Lifecycle Events: https://developers.jivesoftware.com/community/docs/DOC-1119 -->
-		<!-- <Link rel="event.addapp" href="http://www.example.com/add" /> <Link 
-			rel="event.removeapp" href="http://www.example.com/remove" /> -->
+		<!--
+		<Link rel="event.addapp" href="http://www.example.com/add" />
+		<Link rel="event.removeapp" href="http://www.example.com/remove" />
+		-->
 
 		<!-- Preloaded Content: http://wiki.opensocial.org/index.php?title=Remote_Data_Requests_%28v0.9%29#Preloading_data -->
 		<!-- <Preload href="http://www.example.com" /> -->
@@ -37,12 +49,9 @@
 	</ModulePrefs>
 
 	<!-- User Preferences: http://code.google.com/apis/gadgets/docs/reference.html#Userprefs_Ref -->
-	<UserPref name="work_location" display_name="Where do you work"
-		datatype="string" default_value="" required="false" />
-	<UserPref name="participant" display_name="Participating in challenge"
-		datatype="bool" default_value="" required="false" />
-	<UserPref name="defaultModeOfTransportation" display_name="How do you get to work?"
-		datatype="enum" default_value="" required="false">
+	<UserPref name="work_location" display_name="Where do you work" datatype="string" default_value="" required="false" />
+	<UserPref name="participant" display_name="Participating in challenge" datatype="bool" default_value="" required="false" />
+	<UserPref name="defaultModeOfTransportation" display_name="How do you get to work?" datatype="enum" default_value="" required="false">
 		<EnumValue value="bicycle" display_value="Bicycle (15 points)" />
 		<EnumValue value="bus" display_value="Bus (10 points)" />
 		<EnumValue value="car" display_value="Car (1 points)" />
