@@ -5,13 +5,7 @@
 		author_email="nicolas.lanquetin@accenture.com">
 
 		<!-- Commonly used features -->
-		<Require feature="dynamic-height" />
-		<Require feature="jive-core-v2" />
-		<Require feature="jquery-1.6" />
-		<Require feature="osapi" />
-		<Require feature="settitle" />
-		<Require feature="views" />
-		<Require feature="opensocial-1.0" />
+
 		<Require feature="osapi" />
 		<Require feature="dynamic-height" />
 		<Require feature="minimessage" />
