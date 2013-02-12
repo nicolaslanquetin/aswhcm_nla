@@ -7,6 +7,7 @@
 		<!-- Commonly used features -->
 	    <Require feature="opensocial-1.0"/>
 	    <Require feature="osapi"/>
+	    <Require feature="jive-core-v2" />
 	    <Require feature="dynamic-height"/>
 	    <Require feature="minimessage"/>
 

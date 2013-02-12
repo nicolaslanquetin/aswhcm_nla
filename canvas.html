@@ -8,3 +8,12 @@
 <p>You have <span id='result'></span> friends.</p>
 <p>You work at: <span id='workLocationSpan'></span></p>
 <p><input type="button" value="Post Activity" onclick="postActivity(); return true;"/></p>
+
+<form id="blogpost_form" onsubmit="return postBlogPost();">
+  <p>
+    <div id="blog_name"></div><br />
+    <label for="blog_subject">Subject:</label><input id="blog_subject" /><br />
+    <label for="blog_content">Content:</label><input id="blog_content" /><br />
+    <input type="submit" value="Post">
+  </p>
+</form>
