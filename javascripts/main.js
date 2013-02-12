@@ -35,8 +35,6 @@
         msg.createDismissibleMessage("You just posted an activity!");
         gadgets.window.adjustHeight();
   }
-  
-  alert('Main');
 
   gadgets.util.registerOnLoadHandler(init);
-      
+  
