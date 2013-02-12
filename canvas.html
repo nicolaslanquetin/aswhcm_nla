@@ -1,4 +1,53 @@
 <link rel="stylesheet" href="stylesheets/main.css" type="text/css" media="screen" />
 <script type="text/javascript" charset="utf-8" src="javascripts/main.js"></script>
 
-<h2>This is the Canvas View</h2>
+<h2>This is the Canvas View with Code</h2>
+
+      <script  type="text/javascript">
+      function init() {
+        osapi.people.getViewer().execute(function(viewerData) {
+           if (!viewerData.error) {
+              var viewerDiv = document.getElementById('current_user_id'),
+                  viewerThumbnailImg = document.getElementById('viewerThumbnailImg');
+              viewerDiv.innerHTML += viewerData.displayName;
+              viewerThumbnailImg.attributes.getNamedItem("src").nodeValue=viewerData.thumbnailUrl;
+              gadgets.window.adjustHeight();
+           };
+        });
+
+        osapi.people.getViewerFriends().execute(function(viewerFriends) {
+           if (!viewerFriends.error){
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = viewerFriends.list.length;
+           }
+        });
+
+        var workLocationSpan = document.getElementById('workLocationSpan'),
+            prefs = new gadgets.Prefs(),
+            yourWorkLocation = prefs.getString("work_location");
+            workLocationSpan.innerHTML = yourWorkLocation;
+
+      }
+
+      function postActivity(){
+        var params = {activity: {title:"Hello Jive!",
+                              body:"Posting to the stream is easy!"}
+                  };
+         osapi.activities.create(params).execute(myCallback);
+      }
+
+      function myCallback(){
+        var msg = new gadgets.MiniMessage(__MODULE_ID__);
+            msg.createDismissibleMessage("You just posted an activity!");
+            gadgets.window.adjustHeight();
+      }
+
+
+      gadgets.util.registerOnLoadHandler(init);
+      </script>
+
+      <p>Your display name is: <span id="current_user_id"></span></p>
+      <p>Your thumbnail is: <img id="viewerThumbnailImg" src=""></img></p>
+      <p>You have <span id='result'></span> friends.</p>
+      <p>You work at: <span id='workLocationSpan'></span></p>
+      <p><input type="button" value="Post Activity" onclick="postActivity(); return true;"/></p>
