@@ -50,8 +50,7 @@
 		<EnumValue value="train" display_value="Train (10 points)" />
 	</UserPref>
 
-	<Content type="html" view="home" href="home.html"
-		preferred_height="400" />
+	<Content type="html" view="home" href="home.html" />
 	<Content type="html" view="canvas" href="canvas.html" />
 
 </Module>
