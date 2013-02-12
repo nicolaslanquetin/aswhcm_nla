@@ -5,9 +5,10 @@
 		author_email="nicolas.lanquetin@accenture.com">
 
 		<!-- Commonly used features -->
-		<Require feature="osapi" />
-		<Require feature="dynamic-height" />
-		<Require feature="minimessage" />
+	    <Require feature="opensocial-1.0"/>
+	    <Require feature="osapi"/>
+	    <Require feature="dynamic-height"/>
+	    <Require feature="minimessage"/>
 
 		<!-- Icons: 3 sizes, 16x16, 48x48, 128x128 -->
 		<Link rel="Icon" href="images/icon16.png" />
